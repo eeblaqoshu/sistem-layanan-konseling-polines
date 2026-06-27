@@ -4,10 +4,10 @@ import Lorem from './page/lorem'
 function App() {
 
   return (
-    <>
-    <Lorem />
-    </>
+    <p className="text-2xl font-bold text-black">
+        testing branch & pr
+    </p>
   )
 }
-
+  
 export default App
