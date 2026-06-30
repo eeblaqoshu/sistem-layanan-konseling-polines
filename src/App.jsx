@@ -5,6 +5,9 @@ import BookingBerhasil from "./page/BookingBerhasil";
 import DetailPemesanan from "./page/DetailPemesanan";
 import Dashboard from "./page/Dashboard";
 import DetailJadwalKonselor from "./page/DetailJadwalKonselor";
+import Konseling from "./page/Konseling";
+// import Navbar from './components/Navbar'
+// import Footer from './components/Footer'
 
 function App() {
   return (
