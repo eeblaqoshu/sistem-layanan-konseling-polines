@@ -13,7 +13,7 @@ import {
 function Dashboard() {
     return (
         <div className="min-h-screen bg-[#F9FAFD]">
-            <div className="mx-auto w-full max-w-7xl px-28 py-12">
+            <div className="mx-auto w-full max-w-7xl px-28 pt-5 pb-12">
 
                 {/* hero */}
                 <div className="flex items-center justify-between gap-16">
@@ -27,12 +27,12 @@ function Dashboard() {
                         </p>
                     </div>
                     <div className="flex justify-end">
-                        <img src="/assets/img/hero.png" alt="Gambar orang" className="w-85 object-contain"
+                        <img src="/assets/img/hero.png" alt="Gambar orang" className="w-85 object-contain mr-10"
                         />
                     </div>
                 </div>
                 {/* jadwal tdk */}
-                <div className="mt-10 rounded-3xl bg-white px-8 py-6 shadow-md">
+                <div className="mt-5 rounded-3xl bg-white px-8 py-6 shadow-md">
                     <h2 className="text-xl font-bold text-[#1F1F1F]">
                         Jadwal Terdekat
                     </h2>
