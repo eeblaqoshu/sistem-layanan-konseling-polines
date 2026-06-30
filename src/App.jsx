@@ -1,12 +1,15 @@
 import { useState } from 'react'
 import Lorem from './page/lorem'
+import Dashboard from "./page/Dashboard";
+// import Navbar from './components/Navbar'
+// import Footer from './components/Footer'
 
 function App() {
 
   return (
-    <p className="text-2xl font-bold text-black">
-        testing branch & pr
-    </p>
+    <>
+    <Dashboard />
+    </>  
   )
 }
   
