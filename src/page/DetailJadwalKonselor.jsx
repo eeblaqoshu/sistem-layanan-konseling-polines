@@ -19,7 +19,7 @@ import {
 function DetailJadwalKonselor() {
   const [selected, setSelected] = useState(new Date(2026, 6, 1));
   return (
-    <div className="min-h-screen bg-[#F9FAFD]">
+    <div className="min-h-screen mt-9">
       <div className="mx-auto w-full max-w-7xl px-20 pt-15 pb-10">
         <div className="flex items-center gap-8">
           {/* foto sikolog */}
