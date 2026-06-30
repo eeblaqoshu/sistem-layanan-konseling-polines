@@ -84,7 +84,7 @@ function DetailJadwalKonselor() {
                 day: "flex justify-center",
                 day_button: "w-8 h-8 rounded-full text-[12px] font-medium hover:bg-[#F2EEFF] transition",
                 selected: "bg-[#7B61FF] text-white rounded-full",
-                outside: "hidden"
+                outside: "invisible"
               }}
             />
           </div>
