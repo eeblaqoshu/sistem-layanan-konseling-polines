@@ -1,13 +1,11 @@
 import { useState } from 'react'
-import Lorem from './page/lorem'
+import Lorem from './page/DaftarKonselor'
 
 function App() {
 
   return (
-    <p className="text-2xl font-bold text-black">
-        testing branch & pr
-    </p>
+    <Lorem />
   )
 }
-  
+
 export default App
