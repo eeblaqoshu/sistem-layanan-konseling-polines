@@ -21,18 +21,18 @@ export default function Navbar() {
           <img
             src={Logo}
             alt="logo"
-            className="w-12 h-12 justify-center items-center top-2"
+            className="w-10 h-10 justify-center items-center top-2 my-auto"
           />
           <div className="flex flex-col  text-left">
-            <Link to="/" className="poppins-semibold text-xl text-black">
+            <Link to="/" className="poppins-semibold text-lg text-black">
               POLINES
             </Link>
-            <span className="poppins-light text-sm">Layanan Konseling</span>
+            <span className="poppins-light text-xs">Layanan Konseling</span>
           </div>
         </div>
 
         {/* Menu Desktop */}
-        <ul className="hidden md:flex flex-row space-x-24 text-md poppins-regular">
+        <ul className="hidden md:flex flex-row space-x-24 text-sm poppins-regular">
           {menuItems.map((item) => (
             <li key={item.href}>
               <Link
@@ -47,14 +47,14 @@ export default function Navbar() {
 
         <div className="hidden md:flex flex-row space-x-2 justify-center items-center">
           <Link to="/">
-            <img src={Notifikasi} alt="Panah" className="w-7.5 h-7.5" />
+            <img src={Notifikasi} alt="Panah" className="w-6 h-6 mr-2" />
           </Link>
           <img
             src={Profile}
             alt="Profile"
-            className="w-11.25 h-11.25 rounded-full object-cover"
+            className="w-8 h-8 rounded-full object-cover"
           />
-          <span className="poppins-regular text-md text-black">Slamet</span>
+          <span className="poppins-regular text-sm text-black">Slamet</span>
           <Link to="/">
             <img src={PanahBawah} alt="PanahBawah" className="w-5 h-5" />
           </Link>
