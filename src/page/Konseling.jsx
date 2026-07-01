@@ -16,7 +16,7 @@ function Konseling() {
 
   return (
     <div className="min-h-screen bg-[#F9FAFD]">
-      <div className="mx-auto w-full max-w-7xl px-20 py-10">
+      <div className="mx-auto w-full max-w-7xl px-20 pb-10 pt-25">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-4">
             <img src="/assets/img/psikolog.png" alt="Psikolog" className="h-14 w-14 rounded-full object-cover" />

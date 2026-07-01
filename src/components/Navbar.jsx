@@ -21,18 +21,18 @@ export default function Navbar() {
           <img
             src={Logo}
             alt="logo"
-            className="w-12 h-12 justify-center items-center top-2"
+            className="w-10 h-10 justify-center items-center top-2 my-auto"
           />
           <div className="flex flex-col  text-left">
-            <Link to="/" className="poppins-semibold text-xl text-black">
+            <Link to="/" className="poppins-semibold text-lg text-black">
               POLINES
             </Link>
-            <span className="poppins-light text-sm">Layanan Konseling</span>
+            <span className="poppins-light text-xs">Layanan Konseling</span>
           </div>
         </div>
 
         {/* Menu Desktop */}
-        <ul className="hidden md:flex flex-row space-x-24 text-md poppins-regular">
+        <ul className="hidden md:flex flex-row space-x-24 text-sm poppins-regular">
           {menuItems.map((item) => (
             <li key={item.href}>
               <Link
@@ -47,15 +47,16 @@ export default function Navbar() {
 
         <div className="hidden md:flex flex-row space-x-2 justify-center items-center">
           <Link to="/">
-            <img src={Notifikasi} alt="Panah" className="w-7.5 h-7.5" />
+            <img src={Notifikasi} alt="Panah" className="w-6 h-6 mr-2" />
           </Link>
-          <img
-            src={Profile}
-            alt="Profile"
-            className="w-11.25 h-11.25 rounded-full object-cover"
-          />
-          <span className="poppins-regular text-md text-black">Slamet</span>
-          <Link to="/">
+          
+          <Link to="/profile" className="flex items-center gap-2">
+            <img
+              src={Profile}
+              alt="Profile"
+              className="w-11.25 h-11.25 rounded-full object-cover"
+            />
+            <span className="poppins-regular text-md text-black">Slamet</span>
             <img src={PanahBawah} alt="PanahBawah" className="w-5 h-5" />
           </Link>
         </div>
@@ -87,7 +88,7 @@ export default function Navbar() {
             <li key={item.href}>
               <Link
                 to={item.href}
-                className="block hover:text-purple-700 text-black transition py-1"
+                className="block hover:text-purple-700 text-black text-center transition py-1"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -95,13 +96,20 @@ export default function Navbar() {
             </li>
           ))}
           {/* Tombol Login Mobile */}
-          <li>
+          <li className="flex flex-col space-y-3">
             <Link
-              to="/login"
+              to="/profile"
               className="block text-center bg-purple-500 poppins-medium hover:bg-purple-700 text-white px-4 py-2 rounded-md transition duration-200"
               onClick={() => setIsOpen(false)}
             >
               PROFILE
+            </Link>
+            <Link
+              to="/login"
+              className="block text-center border border-gray-300 bg-white poppins-medium hover:bg-gray-100 text-purple-500 px-4 py-2 rounded-md transition duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+              LOGIN
             </Link>
           </li>
         </ul>

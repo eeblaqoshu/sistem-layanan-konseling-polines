@@ -11,11 +11,21 @@ import MetodeKonseling from "./page/PilihMetode";
 import RiwayatKonseling from "./page/RiwayatKonseling";
 import CatatanKonseling from "./page/CatatanKonseling";
 import Feedback from "./page/Feedback";
+import Splash from "./page/Splash";
+import Login from "./page/Login";
+import Profile from "./page/Profile";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
+        {/* Halaman tanpa Navbar/Footer */}
+        <Route path="/" element={<Navigate to="/splash" replace />} />
+        <Route path="/splash" element={<Splash />} />
+
+        {/* Halaman dengan Navbar/Footer */}
         <Route path="/" element={<Layout />}>
           <Route index element={<Navigate to="home" replace />} />
           <Route path="home" element={<Dashboard />} />
@@ -27,6 +37,8 @@ function App() {
           <Route path="metode-kamu" element={<MetodeKonseling />} />
           <Route path="riwayat-konseling" element={<RiwayatKonseling />} />
           <Route path="catatan-konseling" element={<CatatanKonseling />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="login" element={<Login />} />
         </Route>
 
         <Route path="feedback" element={<Feedback />} />

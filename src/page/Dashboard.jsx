@@ -13,15 +13,16 @@ import {
 
 function Dashboard() {
   return (
-    <div className="min-h-screen mt-8">
-      <div className="mx-auto w-full max-w-7xl px-28 pt-5 pb-12">
-        {/* hero */}
-        <div className="flex items-center justify-between gap-16">
-          <div className="max-w-xl text-left">
-            <h1 className="text-3xl font-extrabold text-[#1F1F1F] leading-tight">
+    <div className="min-h-screen mt-10">
+      <div className="mx-auto w-full max-w-7xl px-4 md:px-10 lg:px-28 pt-5 pb-12">
+        {/* Hero */}
+        <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-16">
+          <div className="max-w-xl text-center lg:text-left">
+            <h1 className="text-2xl md:text-3xl font-extrabold text-[#1F1F1F] leading-tight">
               Halo, Lukman Setiawan!
             </h1>
-            <p className="mt-5 text-lg leading-8 text-black">
+
+            <p className="mt-4 md:mt-5 text-base md:text-lg leading-7 md:leading-8 text-black">
               Kesehatan mentalmu penting.
               <br />
               Kami siap mendengarkan dan membantu kamu
@@ -29,53 +30,76 @@ function Dashboard() {
               menjadi versi terbaik dirimu.
             </p>
           </div>
-          <div className="flex justify-end">
+
+          <div className="flex justify-center lg:justify-end">
             <img
               src="/assets/img/hero.png"
               alt="Gambar orang"
-              className="w-85 object-contain mr-10"
+              className="w-60 md:w-72 lg:w-85 object-contain"
             />
           </div>
         </div>
-        {/* jadwal tdk */}
-        <div className="mt-5 rounded-3xl bg-white px-8 py-6 shadow-md">
-          <h2 className="text-xl font-bold text-[#1F1F1F]">Jadwal Terdekat</h2>
-          <div className="mt-6 flex items-center justify-between">
-            <div className="flex items-center gap-5">
+
+        {/* Jadwal Terdekat */}
+        <div className="mt-5 rounded-3xl bg-white px-5 md:px-8 py-6 shadow-md">
+          <h2 className="text-lg md:text-xl font-bold text-[#1F1F1F]">
+            Jadwal Terdekat
+          </h2>
+
+          <div className="mt-6 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5">
+            {/* Tanggal */}
+            <div className="flex items-center gap-4 md:gap-5">
               <CalendarDays
-                size={58}
+                size={52}
                 strokeWidth={1.8}
                 className="text-[#8D7AD6]"
               />
-              <div className="space-y-3">
+
+              <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <CalendarDays size={18} className="text-[#8D7AD6]" />
-                  <span className="text-[15px]">Rabu, 1 Juli 2026</span>
+                  <span className="text-sm md:text-[15px]">
+                    Rabu, 1 Juli 2026
+                  </span>
                 </div>
+
                 <div className="flex items-center gap-2">
                   <Clock3 size={18} className="text-[#8D7AD6]" />
-                  <span className="text-[15px]">10.00 - 10.50 WIB</span>
+                  <span className="text-sm md:text-[15px]">
+                    10.00 - 10.50 WIB
+                  </span>
                 </div>
               </div>
             </div>
-            {/* dr */}
+
+            {/* Konselor */}
             <div className="flex items-center gap-2">
               <CircleUserRound size={20} className="text-[#8D7AD6]" />
-              <span className="text-[15px]">Rina Wulandari, M.Psi.</span>
+              <span className="text-sm md:text-[15px]">
+                Rina Wulandari, M.Psi.
+              </span>
             </div>
-            {/* st */}
-            <Link to="/catatan-konseling" className="rounded-lg bg-[#E9E0FF] px-7 py-2 text-sm font-semibold text-[#7B61FF]">
+
+            {/* Status */}
+            <span
+              className="rounded-lg bg-[#E9E0FF] px-5 py-2 text-center text-sm font-semibold text-[#7B61FF]"
+            >
               Tatap Muka
-            </Link>
-            {/* det */}
-            <Link to="/detail-jadwal" className="rounded-lg bg-[#7B61FF] px-8 py-3 font-semibold text-white transition hover:bg-[#6D52F5]">
+            </span>
+
+            {/* Detail */}
+            <Link
+              to="/detail-jadwal"
+              className="rounded-lg bg-[#7B61FF] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#6D52F5]"
+            >
               Lihat Detail
             </Link>
           </div>
         </div>
-        {/* menu */}
-        <div className="mt-6 grid grid-cols-4 gap-5">
-          {/* buat jdw */}
+
+        {/* Menu */}
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {/* Buat Jadwal */}
           <div className="rounded-2xl bg-white p-6 shadow-md transition hover:-translate-y-1">
             <div className="flex justify-center">
               <CalendarDays
@@ -84,13 +108,21 @@ function Dashboard() {
                 className="text-[#8D7AD6]"
               />
             </div>
-            <h3 className="mt-5 text-center text-lg font-bold">Buat Jadwal</h3>
+
+            <h3 className="mt-5 text-center text-lg font-bold">
+              Buat Jadwal
+            </h3>
+
             <p className="mt-1 text-center text-sm text-gray-500">
               Booking sesi baru
             </p>
           </div>
-          {/* info */}
-          <Link to="/layanan-informasi" className="rounded-2xl bg-[#F5FFF2] p-6 shadow-md transition hover:-translate-y-1">
+
+          {/* Informasi */}
+          <Link
+            to="/layanan-informasi"
+            className="rounded-2xl bg-[#F5FFF2] p-6 shadow-md transition hover:-translate-y-1"
+          >
             <div className="flex justify-center">
               <Info
                 size={60}
@@ -98,26 +130,35 @@ function Dashboard() {
                 className="rounded-full bg-[#4F7DF3] p-2 text-white"
               />
             </div>
+
             <h3 className="mt-5 text-center text-lg font-bold">
               Informasi Layanan
             </h3>
+
             <p className="mt-1 text-center text-sm text-gray-500">
               Lihat jenis layanan
             </p>
           </Link>
-          {/* hisroty */}
-          <Link to="/riwayat-konseling" className="rounded-2xl bg-[#F1FFE9] p-6 shadow-md transition hover:-translate-y-1">
+
+          {/* Riwayat */}
+          <Link
+            to="/riwayat-konseling"
+            className="rounded-2xl bg-[#F1FFE9] p-6 shadow-md transition hover:-translate-y-1"
+          >
             <div className="flex justify-center">
               <History size={60} strokeWidth={2} className="text-[#2CB72C]" />
             </div>
+
             <h3 className="mt-5 text-center text-lg font-bold">
               Riwayat Konseling
             </h3>
+
             <p className="mt-1 text-center text-sm text-gray-500">
               Riwayat sesi Anda
             </p>
           </Link>
-          {/* chat */}
+
+          {/* Chat */}
           <div className="rounded-2xl bg-[#FFF5F5] p-6 shadow-md transition hover:-translate-y-1">
             <div className="flex justify-center">
               <MessageCircleMore
@@ -126,49 +167,63 @@ function Dashboard() {
                 className="text-[#FF4B6E]"
               />
             </div>
+
             <h3 className="mt-5 text-center text-lg font-bold">
               Chat / Darurat
             </h3>
+
             <p className="mt-1 text-center text-sm text-gray-500">
               Butuh bantuan cepat?
             </p>
           </div>
         </div>
-        {/* benefit */}
-        <div className="mt-6 grid grid-cols-3 gap-5">
-          {/* anam */}
+
+        {/* Benefit */}
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {/* Aman */}
           <div className="flex items-center gap-5 rounded-2xl bg-white p-6 shadow-md">
             <div className="rounded-full bg-[#F3F1FB] p-4">
               <Shield size={34} className="text-[#8D7AD6]" />
             </div>
+
             <div>
-              <h3 className="font-bold"> Aman & Rahasia</h3>
+              <h3 className="font-bold">Aman & Rahasia</h3>
+
               <p className="mt-1 text-sm text-gray-500">
                 Privasi Anda adalah prioritas kami.
               </p>
             </div>
           </div>
-          {/* ez */}
+
+          {/* Mudah */}
           <div className="flex items-center gap-5 rounded-2xl bg-white p-6 shadow-md">
             <div className="rounded-full bg-[#F3F1FB] p-4">
               <Smartphone size={34} className="text-[#8D7AD6]" />
             </div>
+
             <div>
               <h3 className="font-bold">Mudah Diakses</h3>
+
               <p className="mt-1 text-sm text-gray-500">
-                Layanan kapan saja, <br /> di mana saja.
+                Layanan kapan saja,
+                <br />
+                di mana saja.
               </p>
             </div>
           </div>
-          {/* prof */}
+
+          {/* Profesional */}
           <div className="flex items-center gap-5 rounded-2xl bg-white p-6 shadow-md">
             <div className="rounded-full bg-[#F3F1FB] p-4">
               <Users size={34} className="text-[#8D7AD6]" />
             </div>
+
             <div>
               <h3 className="font-bold">Profesional</h3>
+
               <p className="mt-1 text-sm text-gray-500">
-                Dibimbing oleh <br />
+                Dibimbing oleh
+                <br />
                 konselor kompeten.
               </p>
             </div>
@@ -178,4 +233,5 @@ function Dashboard() {
     </div>
   );
 }
+
 export default Dashboard;

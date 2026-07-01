@@ -131,6 +131,7 @@ export default function DetailPemesanan() {
             flex-1
             py-3
             bg-white
+            text-center
             border border-gray-300
             rounded-xl
             shadow-sm
@@ -143,11 +144,12 @@ export default function DetailPemesanan() {
           Kembali
         </Link>
 
-        <Link to="/booking-berhasil"
+        <Link to="/catatan-konseling"
           type="button"
           className="
             flex-1
             py-3
+            text-center
             bg-purple-500
             rounded-xl
             shadow-sm

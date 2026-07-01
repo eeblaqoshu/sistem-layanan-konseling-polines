@@ -127,9 +127,10 @@ export default function CatatanKonseling() {
             </div>
 
             {/* Tombol */}
-            <button
+            <Link to="/feedback"
               className="
                 w-full
+                text-center
                 bg-[#8B7CF6]
                 hover:bg-[#7364ee]
                 text-white
@@ -142,7 +143,7 @@ export default function CatatanKonseling() {
               "
             >
               Jadwalkan Sesi Lanjutan
-            </button>
+            </Link>
           </div>
 
           {/* KANAN */}
@@ -239,12 +240,13 @@ export default function CatatanKonseling() {
                 Kembali
               </Link>
 
-              <Link to="/feedback"
+              <Link to="/booking-berhasil"
                 className="
                 px-2
                   py-3
                   rounded-lg
                   text-md
+                  text-center
                   bg-[#8B7CF6]
                   hover:bg-[#7364ee]
                   text-white
