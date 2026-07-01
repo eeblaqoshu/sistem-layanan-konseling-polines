@@ -125,7 +125,7 @@ export default function DetailPemesanan() {
 
       {/* Tombol */}
       <div className="w-full max-w-2xl flex flex-col md:flex-row gap-3 mt-5">
-        <Link to="/layanan-informasi"
+        <Link to="/metode-kamu"
           type="Link"
           className="
             flex-1

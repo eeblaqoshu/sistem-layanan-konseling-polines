@@ -2,7 +2,7 @@
 :root {
   /* --text: #6b6375; */
   /* --text-h: #08060d; */
-  --bg: #F8F9FD;
+  --bg: #f8f9fd;
   /* --border: #e5e4e7; */
   --code-bg: #f4f3ec;
   --accent: #aa3bff;
@@ -33,6 +33,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -42,7 +43,7 @@ body {
 
 #root {
   min-height: 100vh;
-    /* width: 1126px; */
+  /* width: 1126px; */
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -52,6 +53,7 @@ body {
   flex-direction: column;
   box-sizing: border-box;
 }
+
 
 code,
 .counter {

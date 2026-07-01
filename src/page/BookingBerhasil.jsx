@@ -60,7 +60,7 @@ export default function BookingBerhasil() {
         </Link>
 
         {/* Tombol Riwayat */}
-        <Link
+        <Link to="/riwayat-konseling"
           type="button"
           className="
             flex w-full items-center justify-center gap-3

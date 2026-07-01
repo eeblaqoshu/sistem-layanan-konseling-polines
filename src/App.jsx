@@ -5,6 +5,12 @@ import BookingBerhasil from "./page/BookingBerhasil";
 import DetailPemesanan from "./page/DetailPemesanan";
 import Dashboard from "./page/Dashboard";
 import DetailJadwalKonselor from "./page/DetailJadwalKonselor";
+import Konseling from "./page/Konseling";
+import DaftarKonselor from "./page/DaftarKonselor";
+import MetodeKonseling from "./page/PilihMetode";
+import RiwayatKonseling from "./page/RiwayatKonseling";
+import CatatanKonseling from "./page/CatatanKonseling";
+import Feedback from "./page/Feedback";
 
 function App() {
   return (
@@ -15,17 +21,18 @@ function App() {
           <Route path="home" element={<Dashboard />} />
           <Route path="detail-jadwal" element={<DetailJadwalKonselor />} />
           <Route path="layanan-informasi" element={<InformasiLayanan />} />
-          <Route path="booking-berhasil" element={<BookingBerhasil />}/>
-          <Route path="detail-pemesanan" element={<DetailPemesanan />}/>
+          <Route path="booking-berhasil" element={<BookingBerhasil />} />
+          <Route path="detail-pemesanan" element={<DetailPemesanan />} />
+          <Route path="konselor" element={<DaftarKonselor />} />
+          <Route path="metode-kamu" element={<MetodeKonseling />} />
+          <Route path="riwayat-konseling" element={<RiwayatKonseling />} />
+          <Route path="catatan-konseling" element={<CatatanKonseling />} />
         </Route>
 
-        <Route
-          path="/"
-          element={<Navigate to="/home" replace />}
-        />
+        <Route path="feedback" element={<Feedback />} />
+        <Route path="/" element={<Navigate to="/home" replace />} />
       </Routes>
     </BrowserRouter>
   );
 }
-  
-export default App
+export default App;

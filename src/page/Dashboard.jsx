@@ -17,7 +17,7 @@ function Dashboard() {
       <div className="mx-auto w-full max-w-7xl px-28 pt-5 pb-12">
         {/* hero */}
         <div className="flex items-center justify-between gap-16">
-          <div className="max-w-xl">
+          <div className="max-w-xl text-left">
             <h1 className="text-3xl font-extrabold text-[#1F1F1F] leading-tight">
               Halo, Lukman Setiawan!
             </h1>
@@ -64,9 +64,9 @@ function Dashboard() {
               <span className="text-[15px]">Rina Wulandari, M.Psi.</span>
             </div>
             {/* st */}
-            <button className="rounded-lg bg-[#E9E0FF] px-7 py-2 text-sm font-semibold text-[#7B61FF]">
+            <Link to="/catatan-konseling" className="rounded-lg bg-[#E9E0FF] px-7 py-2 text-sm font-semibold text-[#7B61FF]">
               Tatap Muka
-            </button>
+            </Link>
             {/* det */}
             <Link to="/detail-jadwal" className="rounded-lg bg-[#7B61FF] px-8 py-3 font-semibold text-white transition hover:bg-[#6D52F5]">
               Lihat Detail
@@ -90,7 +90,7 @@ function Dashboard() {
             </p>
           </div>
           {/* info */}
-          <div className="rounded-2xl bg-[#F5FFF2] p-6 shadow-md transition hover:-translate-y-1">
+          <Link to="/layanan-informasi" className="rounded-2xl bg-[#F5FFF2] p-6 shadow-md transition hover:-translate-y-1">
             <div className="flex justify-center">
               <Info
                 size={60}
@@ -104,9 +104,9 @@ function Dashboard() {
             <p className="mt-1 text-center text-sm text-gray-500">
               Lihat jenis layanan
             </p>
-          </div>
+          </Link>
           {/* hisroty */}
-          <div className="rounded-2xl bg-[#F1FFE9] p-6 shadow-md transition hover:-translate-y-1">
+          <Link to="/riwayat-konseling" className="rounded-2xl bg-[#F1FFE9] p-6 shadow-md transition hover:-translate-y-1">
             <div className="flex justify-center">
               <History size={60} strokeWidth={2} className="text-[#2CB72C]" />
             </div>
@@ -116,7 +116,7 @@ function Dashboard() {
             <p className="mt-1 text-center text-sm text-gray-500">
               Riwayat sesi Anda
             </p>
-          </div>
+          </Link>
           {/* chat */}
           <div className="rounded-2xl bg-[#FFF5F5] p-6 shadow-md transition hover:-translate-y-1">
             <div className="flex justify-center">
