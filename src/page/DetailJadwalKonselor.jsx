@@ -26,9 +26,9 @@ function DetailJadwalKonselor() {
           <img src="/assets/img/psikolog.png" alt="Dr. Rina Wulandari" className="h-36 w-36 rounded-full object-cover"
           />
           {/* bio */}
-          <div>
-            <h1 className="text-2xl font-extrabold text-[#1F1F1F]">Rina Wulandari , M.Psi., Psikolog</h1>
-            <p className="mt-2 text-[17px] text-[#444] font-semibold">Psikolog Klinis</p>
+          <div className="text-left">
+            <h1 className=" font-extrabold text-[#1F1F1F]">Rina Wulandari , M.Psi., Psikolog</h1>
+            <p className="mt-2 text-[#444] font-semibold">Psikolog Klinis</p>
             <p className="mt-4 max-w-2xl leading-7 text-black text-sm">
               Berpengalaman lebih dari 8 tahun membantu mahasiswa POLINES
               dalam mengatasi berbagai tantangan psikologis dan
