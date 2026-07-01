@@ -37,7 +37,7 @@ export default function InformasiLayanan() {
             </div>
 
             {/* Panah kanan */}
-            <Link to="/detail-pemesanan" className="flex-shrink-0 ml-2">
+            <Link to="/metode-kamu" className="flex-shrink-0 ml-2">
               <img src={PanahBawah} alt="PanahBawah" className="w-4 h-4 md:w-5 md:h-5" />
             </Link>
           </div>
@@ -66,9 +66,9 @@ export default function InformasiLayanan() {
             </div>
 
             {/* Panah kanan */}
-            <button className="flex-shrink-0 ml-2">
+            <Link to="/metode-kamu" className="flex-shrink-0 ml-2">
               <img src={PanahBawah} alt="PanahBawah" className="w-4 h-4 md:w-5 md:h-5" />
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -97,9 +97,9 @@ export default function InformasiLayanan() {
             </div>
 
             {/* Panah kanan */}
-            <button className="flex-shrink-0 ml-2">
+            <Link to="/metode-kamu" className="flex-shrink-0 ml-2">
               <img src={PanahBawah} alt="PanahBawah" className="w-4 h-4 md:w-5 md:h-5" />
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -126,9 +126,9 @@ export default function InformasiLayanan() {
             </div>
 
             {/* Panah kanan */}
-            <button className="flex-shrink-0 ml-2">
+            <Link to="/metode-kamu" className="flex-shrink-0 ml-2">
               <img src={PanahBawah} alt="PanahBawah" className="w-4 h-4 md:w-5 md:h-5" />
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -154,9 +154,9 @@ export default function InformasiLayanan() {
             </div>
 
             {/* Panah kanan */}
-            <button className="flex-shrink-0 ml-2">
+            <Link to="/metode-kamu" className="flex-shrink-0 ml-2">
               <img src={PanahBawah} alt="PanahBawah" className="w-4 h-4 md:w-5 md:h-5" />
-            </button>
+            </Link>
           </div>
         </div>
       </div>

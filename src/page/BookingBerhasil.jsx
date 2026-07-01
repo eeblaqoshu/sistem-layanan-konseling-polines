@@ -33,7 +33,7 @@ export default function BookingBerhasil() {
       <div className="flex flex-col w-full max-w-md mt-6 space-y-3">
         {/* Tombol Beranda */}
         <Link
-            to="/layanan-informasi"
+            to="/home"
           type="button"
           className="
             flex w-full items-center justify-center gap-3
@@ -60,7 +60,7 @@ export default function BookingBerhasil() {
         </Link>
 
         {/* Tombol Riwayat */}
-        <Link
+        <Link to="/riwayat-konseling"
           type="button"
           className="
             flex w-full items-center justify-center gap-3

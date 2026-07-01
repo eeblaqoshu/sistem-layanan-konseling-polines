@@ -28,8 +28,8 @@ export default function Profile() {
     <div className="min-h-screen bg-[#F7F8FC]">
       <Navbar />
 
-      <main className="max-w-5xl mx-auto px-4 py-8">
-        <h1 className="text-lg font-bold text-gray-900 mb-5">Profil Saya</h1>
+      <main className="max-w-5xl mx-auto px-4 py-8 mt-16">
+        <h1 className="text-lg poppins-bold font-bold text-gray-900 mb-5">Profil Saya</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6">
           {/* Kartu Profil */}
@@ -51,7 +51,7 @@ export default function Profile() {
 
           {/* Pengaturan Akun */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-            <h2 className="font-bold text-gray-900 mb-4">Pengaturan Akun</h2>
+            <h2 className="font-bold poppins-bold text-gray-900 mb-4">Pengaturan Akun</h2>
 
             <div className="flex flex-col gap-3">
               {settingsItems.map(({ icon: Icon, title, desc }) => (

@@ -125,12 +125,13 @@ export default function DetailPemesanan() {
 
       {/* Tombol */}
       <div className="w-full max-w-2xl flex flex-col md:flex-row gap-3 mt-5">
-        <Link to="/layanan-informasi"
+        <Link to="/metode-kamu"
           type="Link"
           className="
             flex-1
             py-3
             bg-white
+            text-center
             border border-gray-300
             rounded-xl
             shadow-sm
@@ -143,11 +144,12 @@ export default function DetailPemesanan() {
           Kembali
         </Link>
 
-        <Link to="/booking-berhasil"
+        <Link to="/catatan-konseling"
           type="button"
           className="
             flex-1
             py-3
+            text-center
             bg-purple-500
             rounded-xl
             shadow-sm

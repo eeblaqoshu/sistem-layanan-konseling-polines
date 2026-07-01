@@ -88,7 +88,7 @@ export default function Navbar() {
             <li key={item.href}>
               <Link
                 to={item.href}
-                className="block hover:text-purple-700 text-black transition py-1"
+                className="block hover:text-purple-700 text-black text-center transition py-1"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
@@ -96,13 +96,20 @@ export default function Navbar() {
             </li>
           ))}
           {/* Tombol Login Mobile */}
-          <li>
+          <li className="flex flex-col space-y-3">
             <Link
-              to="/login"
+              to="/profile"
               className="block text-center bg-purple-500 poppins-medium hover:bg-purple-700 text-white px-4 py-2 rounded-md transition duration-200"
               onClick={() => setIsOpen(false)}
             >
               PROFILE
+            </Link>
+            <Link
+              to="/login"
+              className="block text-center border border-gray-300 bg-white poppins-medium hover:bg-gray-100 text-purple-500 px-4 py-2 rounded-md transition duration-200"
+              onClick={() => setIsOpen(false)}
+            >
+              LOGIN
             </Link>
           </li>
         </ul>

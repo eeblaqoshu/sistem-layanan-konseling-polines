@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Info } from "lucide-react";
 import tatapMukaImg from "../assets/tatap_muka.svg";
 import onlineImg from "../assets/online.svg";
-
+import { Link } from "react-router-dom";
 
 const METODE = [
   {
@@ -59,11 +59,11 @@ function MetodeCard({ data, selected, onSelect }) {
       <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-500">
         {data.desc}
       </p>
-      <span
+      <Link to="/detail-pemesanan"
         className={`w-full rounded-lg py-2.5 text-sm font-semibold text-white ${style.button}`}
       >
         {data.cta}
-      </span>
+      </Link>
     </div>
   );
 }
@@ -76,7 +76,7 @@ export default function PilihMetode() {
      
       <div className="mx-auto max-w-4xl px-6 py-10">
         <div className="mb-8 text-center">
-          <h1 className="mb-2 text-2xl font-bold text-gray-900">
+          <h1 className="mb-2 mt-16 text-2xl font-bold text-gray-900">
             Pilih Metode Konseling
           </h1>
           <p className="text-sm text-gray-500">
