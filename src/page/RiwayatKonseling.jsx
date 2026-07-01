@@ -158,7 +158,9 @@ export default function RiwayatKonseling() {
               Tidak ada riwayat konseling pada kategori ini.
             </p>
           ) : (
-            filtered.map((item) => <RiwayatCard key={item.id} item={item} />)
+            filtered.map((item) => (
+              <RiwayatCard key={item.id} item={item} />
+            ))
           )}
         </div>
       </div>
