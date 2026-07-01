@@ -20,7 +20,7 @@ function DetailJadwalKonselor() {
   const [selected, setSelected] = useState(new Date(2026, 6, 1));
   return (
     <div className="min-h-screen bg-[#F9FAFD]">
-      <div className="mx-auto w-full max-w-7xl px-20 pt-15 pb-10">
+      <div className="mx-auto w-full max-w-7xl px-20 pt-30 pb-10">
         <div className="flex items-center gap-8">
           {/* foto sikolog */}
           <img src="/assets/img/psikolog.png" alt="Dr. Rina Wulandari" className="h-36 w-36 rounded-full object-cover"

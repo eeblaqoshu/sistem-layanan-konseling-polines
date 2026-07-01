@@ -13,7 +13,7 @@ import {
 
 function Dashboard() {
   return (
-    <div className="min-h-screen mt-8">
+    <div className="min-h-screen mt-10">
       <div className="mx-auto w-full max-w-7xl px-28 pt-5 pb-12">
         {/* hero */}
         <div className="flex items-center justify-between gap-16">

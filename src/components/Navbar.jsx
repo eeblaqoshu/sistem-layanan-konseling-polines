@@ -21,18 +21,18 @@ export default function Navbar() {
           <img
             src={Logo}
             alt="logo"
-            className="w-12 h-12 justify-center items-center top-2"
+            className="w-10 h-10 justify-center items-center top-2 my-auto"
           />
           <div className="flex flex-col  text-left">
-            <Link to="/" className="poppins-semibold text-xl text-black">
+            <Link to="/" className="poppins-semibold text-lg text-black">
               POLINES
             </Link>
-            <span className="poppins-light text-sm">Layanan Konseling</span>
+            <span className="poppins-light text-xs">Layanan Konseling</span>
           </div>
         </div>
 
         {/* Menu Desktop */}
-        <ul className="hidden md:flex flex-row space-x-24 text-md poppins-regular">
+        <ul className="hidden md:flex flex-row space-x-24 text-sm poppins-regular">
           {menuItems.map((item) => (
             <li key={item.href}>
               <Link
@@ -47,7 +47,7 @@ export default function Navbar() {
 
         <div className="hidden md:flex flex-row space-x-2 justify-center items-center">
           <Link to="/">
-            <img src={Notifikasi} alt="Panah" className="w-7.5 h-7.5" />
+            <img src={Notifikasi} alt="Panah" className="w-6 h-6 mr-2" />
           </Link>
           
           <Link to="/profile" className="flex items-center gap-2">
