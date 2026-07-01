@@ -75,9 +75,7 @@ export default function DetailPemesanan() {
           </div>
 
           <div className="flex flex-col text-left">
-            <span className="text-xs text-gray-500 poppins-regular">
-              Waktu
-            </span>
+            <span className="text-xs text-gray-500 poppins-regular">Waktu</span>
             <span className="text-sm text-black poppins-medium">
               10:00 - 10:50 WIB
             </span>
@@ -125,7 +123,8 @@ export default function DetailPemesanan() {
 
       {/* Tombol */}
       <div className="w-full max-w-2xl flex flex-col md:flex-row gap-3 mt-5">
-        <Link to="/metode-kamu"
+        <Link
+          to="/home"
           type="Link"
           className="
             flex-1
@@ -144,7 +143,8 @@ export default function DetailPemesanan() {
           Kembali
         </Link>
 
-        <Link to="/catatan-konseling"
+        <Link
+          to="/catatan-konseling"
           type="button"
           className="
             flex-1

@@ -17,7 +17,7 @@ export default function CatatanKonseling() {
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:3">
+        <div className="grid grid-cols-1 gap-6 lg:3">
           {/* KIRI */}
           <div className="lg:col-span-2 flex flex-col gap-3">
             {/* Header Sesi */}
@@ -127,7 +127,7 @@ export default function CatatanKonseling() {
             </div>
 
             {/* Tombol */}
-            <Link to="/feedback"
+            <Link to="/detail-jadwal"
               className="
                 w-full
                 text-center
@@ -144,119 +144,6 @@ export default function CatatanKonseling() {
             >
               Jadwalkan Sesi Lanjutan
             </Link>
-          </div>
-
-          {/* KANAN */}
-          <div className="bg-white rounded-xl shadow-md border border-gray-100 p-5 h-fit">
-            <h2 className="text-lg poppins-semibold text-[#23235F] mb-4">
-              Detail Konseling
-            </h2>
-
-            <div className="space-y-3">
-              <div className="border border-gray-200 rounded-xl p-3 flex gap-3 items-center justify-start">
-                <img src={Video} alt="video" className="w-5 h-5 object-fill mt-1" />
-                <div className="text-left">
-                  <p className="text-xs poppins-regular text-gray-500">Metode</p>
-                  <p className="text-sm poppins-regular">Online (Video Call)</p>
-                </div>
-              </div>
-
-              <div className="border border-gray-200 rounded-xl p-3 flex gap-3 items-center justify-start">
-                <img src={Calendar} alt="durasi" className="w-5 h-5 mt-1" />
-                <div className="text-left">
-                  <p className="text-xs text-gray-500">Durasi</p>
-                  <p className="text-sm">50 menit</p>
-                </div>
-              </div>
-
-              <div className="border border-gray-200 rounded-xl p-3 flex gap-3 items-center justify-start">
-                <img src={Calendar} alt="waktu" className="w-5 h-5 mt-1" />
-                <div className="text-left">
-                  <p className="text-xs text-gray-500">Waktu</p>
-                  <p className="text-sm">10:00 - 10:50 WIB</p>
-                </div>
-              </div>
-
-              <div className="border border-gray-200 rounded-xl p-3 flex gap-3 items-center justify-start">
-                <img src={Location} alt="lokasi" className="w-5 h-5 mt-1" />
-                <div className="text-left">
-                  <p className="text-xs text-gray-500">Lokasi</p>
-                  <p className="text-sm">Online via POLINES</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Catatan Pribadi */}
-            <div className="mt-5">
-              <div className="flex items-center gap-2 mb-2">
-                <h3 className="poppins-medium text-[#23235F]">
-                  Catatan pribadi
-                </h3>
-                <span className="text-gray-400 text-sm">(opsional)</span>
-              </div>
-
-              <textarea
-                maxLength={200}
-                placeholder="Tuliskan catatan pribadi Anda di sini..."
-                className="
-                  w-full
-                  h-32
-                  resize-none
-                  border
-                  border-gray-200
-                  rounded-xl
-                  p-3
-                  text-sm
-                  outline-none
-                  transition-all
-                  duration-200
-                  focus:ring-2
-                  focus:ring-violet-300
-                "
-              />
-
-              <div className="text-right text-xs text-gray-400 mt-1">
-                0/200
-              </div>
-            </div>
-
-            {/* Action */}
-            <div className="grid grid-cols-2 gap-3 mt-5">
-              <Link
-                to="/riwayat"
-                className="
-                  text-center
-                  text-md
-                  px-2
-                  py-3
-                  rounded-lg
-                  border
-                  border-gray-200
-                  text-violet-500
-                  poppins-medium
-                  hover:bg-gray-50
-                "
-              >
-                Kembali
-              </Link>
-
-              <Link to="/booking-berhasil"
-                className="
-                px-2
-                  py-3
-                  rounded-lg
-                  text-md
-                  text-center
-                  bg-[#8B7CF6]
-                  hover:bg-[#7364ee]
-                  text-white
-                  poppins-medium
-                  transition
-                "
-              >
-                Konfirmasi & Buat Jadwal
-              </Link>
-            </div>
           </div>
         </div>
       </div>

@@ -152,11 +152,6 @@ export default function InformasiLayanan() {
                 </p>
               </div>
             </div>
-
-            {/* Panah kanan */}
-            <Link to="/metode-kamu" className="flex-shrink-0 ml-2">
-              <img src={PanahBawah} alt="PanahBawah" className="w-4 h-4 md:w-5 md:h-5" />
-            </Link>
           </div>
         </div>
       </div>

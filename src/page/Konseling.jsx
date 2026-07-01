@@ -9,6 +9,7 @@ import {
   PanelRightClose,
   PanelRightOpen
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function Konseling() {
   const [cameraOn, setCameraOn] = useState(true);
@@ -33,9 +34,9 @@ function Konseling() {
             </div>
           </div>
 
-          <button className="rounded-xl border border-[#E4E4E4] bg-white px-8 py-3 text-sm font-medium text-red-500 transition hover:bg-red-50">
+          <Link to="/feedback" className="rounded-xl border border-[#E4E4E4] bg-white px-8 py-3 text-sm font-medium text-red-500 transition hover:bg-red-50">
             Akhiri Sesi
-          </button>
+          </Link>
         </div>
 
         <div
