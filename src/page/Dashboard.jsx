@@ -100,7 +100,7 @@ function Dashboard() {
         {/* Menu */}
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {/* Buat Jadwal */}
-          <div className="rounded-2xl bg-white p-6 shadow-md transition hover:-translate-y-1">
+          <Link to="/layanan-informasi" className="rounded-2xl bg-white p-6 shadow-md transition hover:-translate-y-1">
             <div className="flex justify-center">
               <CalendarDays
                 size={60}
@@ -116,7 +116,7 @@ function Dashboard() {
             <p className="mt-1 text-center text-sm text-gray-500">
               Booking sesi baru
             </p>
-          </div>
+          </Link>
 
           {/* Informasi */}
           <Link
