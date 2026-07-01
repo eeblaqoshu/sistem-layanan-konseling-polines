@@ -6,29 +6,33 @@ import DetailPemesanan from "./page/DetailPemesanan";
 import Dashboard from "./page/Dashboard";
 import DetailJadwalKonselor from "./page/DetailJadwalKonselor";
 import Konseling from "./page/Konseling";
-// import Navbar from './components/Navbar'
-// import Footer from './components/Footer'
+import Splash from "./page/Splash";
+import Login from "./page/Login";
+import Profile from "./page/Profile";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/* Halaman tanpa Navbar/Footer */}
+        <Route path="/" element={<Navigate to="/splash" replace />} />
+        <Route path="/splash" element={<Splash />} />
+        <Route path="/login" element={<Login />} />
+
+        {/* Halaman dengan Navbar/Footer */}
+        <Route path="/home" element={<Layout />}>
+          <Route index element={<Dashboard />} />
+        </Route>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Navigate to="home" replace />} />
-          <Route path="home" element={<Dashboard />} />
           <Route path="detail-jadwal" element={<DetailJadwalKonselor />} />
           <Route path="layanan-informasi" element={<InformasiLayanan />} />
-          <Route path="booking-berhasil" element={<BookingBerhasil />}/>
-          <Route path="detail-pemesanan" element={<DetailPemesanan />}/>
+          <Route path="booking-berhasil" element={<BookingBerhasil />} />
+          <Route path="detail-pemesanan" element={<DetailPemesanan />} />
+          <Route path="profile" element={<Profile />} />
         </Route>
-
-        <Route
-          path="/"
-          element={<Navigate to="/home" replace />}
-        />
       </Routes>
     </BrowserRouter>
   );
 }
-  
-export default App
+
+export default App;
