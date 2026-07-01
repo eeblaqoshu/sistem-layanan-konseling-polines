@@ -39,6 +39,7 @@ function App() {
           <Route path="catatan-konseling" element={<CatatanKonseling />} />
           <Route path="profile" element={<Profile />} />
           <Route path="login" element={<Login />} />
+          <Route path="konseling" element={<Konseling />} />
         </Route>
 
         <Route path="feedback" element={<Feedback />} />

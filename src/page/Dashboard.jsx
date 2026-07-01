@@ -89,7 +89,7 @@ function Dashboard() {
 
             {/* Detail */}
             <Link
-              to="/detail-jadwal"
+              to="/detail-pemesanan"
               className="rounded-lg bg-[#7B61FF] px-6 py-3 text-center font-semibold text-white transition hover:bg-[#6D52F5]"
             >
               Lihat Detail
@@ -100,7 +100,7 @@ function Dashboard() {
         {/* Menu */}
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {/* Buat Jadwal */}
-          <Link to="/layanan-informasi" className="rounded-2xl bg-white p-6 shadow-md transition hover:-translate-y-1">
+          <Link to="/konselor" className="rounded-2xl bg-white p-6 shadow-md transition hover:-translate-y-1">
             <div className="flex justify-center">
               <CalendarDays
                 size={60}

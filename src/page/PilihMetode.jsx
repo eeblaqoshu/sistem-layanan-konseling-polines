@@ -59,7 +59,7 @@ function MetodeCard({ data, selected, onSelect }) {
       <p className="mb-6 flex-grow text-sm leading-relaxed text-gray-500">
         {data.desc}
       </p>
-      <Link to="/detail-pemesanan"
+      <Link to="/konselor"
         className={`w-full rounded-lg py-2.5 text-sm font-semibold text-white ${style.button}`}
       >
         {data.cta}

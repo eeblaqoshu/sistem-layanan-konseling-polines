@@ -1,27 +1,42 @@
-import { Lock, Bell, ShieldCheck, HelpCircle, LogOut, ChevronRight } from 'lucide-react'
-import { useNavigate } from 'react-router-dom'
-import Navbar from '../components/Navbar'
-import avatarProfile from '../assets/LoginProfile/gbrprofile.png'
+import {
+  Lock,
+  Bell,
+  ShieldCheck,
+  HelpCircle,
+  LogOut,
+  ChevronRight,
+} from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import avatarProfile from "../assets/LoginProfile/gbrprofile.png";
 
 const settingsItems = [
-  { icon: Lock, title: 'Ubah Password', desc: 'Perbarui kata sandi akun Anda' },
-  { icon: Bell, title: 'Pengaturan Notifikasi', desc: 'Atur preferensi notifikasi Anda' },
-  { icon: ShieldCheck, title: 'Privasi Data', desc: 'Kelola data dan privasi Anda' },
-  { icon: HelpCircle, title: 'Bantuan', desc: 'Pusat bantuan' },
-]
+  { icon: Lock, title: "Ubah Password", desc: "Perbarui kata sandi akun Anda" },
+  {
+    icon: Bell,
+    title: "Pengaturan Notifikasi",
+    desc: "Atur preferensi notifikasi Anda",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Privasi Data",
+    desc: "Kelola data dan privasi Anda",
+  },
+  { icon: HelpCircle, title: "Bantuan", desc: "Pusat bantuan" },
+];
 
 export default function Profile() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const user = {
-    name: 'Slamet',
-    nim: '33425327',
-    prodi: 'Prodi D3 Teknik Informatika',
-    kampus: 'Politeknik Negeri Semarang',
-  }
+    name: "Slamet",
+    nim: "33425327",
+    prodi: "Prodi D3 Teknik Informatika",
+    kampus: "Politeknik Negeri Semarang",
+  };
 
   function handleLogout() {
-    navigate('/login')
+    navigate("/login");
   }
 
   return (
@@ -29,7 +44,9 @@ export default function Profile() {
       <Navbar />
 
       <main className="max-w-5xl mx-auto px-4 py-8 mt-16">
-        <h1 className="text-lg poppins-bold font-bold text-gray-900 mb-5">Profil Saya</h1>
+        <h1 className="text-lg poppins-bold font-bold text-gray-900 mb-5">
+          Profil Saya
+        </h1>
 
         <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-6">
           {/* Kartu Profil */}
@@ -51,7 +68,9 @@ export default function Profile() {
 
           {/* Pengaturan Akun */}
           <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-            <h2 className="font-bold poppins-bold text-gray-900 mb-4">Pengaturan Akun</h2>
+            <h2 className="font-bold poppins-bold text-gray-900 mb-4">
+              Pengaturan Akun
+            </h2>
 
             <div className="flex flex-col gap-3">
               {settingsItems.map(({ icon: Icon, title, desc }) => (
@@ -63,7 +82,9 @@ export default function Profile() {
                     <Icon size={16} />
                   </span>
                   <span className="flex-1">
-                    <p className="text-sm font-semibold text-gray-800">{title}</p>
+                    <p className="text-sm font-semibold text-gray-800">
+                      {title}
+                    </p>
                     <p className="text-xs text-gray-400">{desc}</p>
                   </span>
                   <ChevronRight size={16} className="text-gray-300" />
@@ -78,8 +99,12 @@ export default function Profile() {
                   <LogOut size={16} />
                 </span>
                 <span className="flex-1">
-                  <p className="text-sm font-semibold text-red-500">Keluar</p>
-                  <p className="text-xs text-red-300">Keluar dari akun anda</p>
+                  <Link to="/login">
+                    <p className="text-sm font-semibold text-red-500">Keluar</p>
+                    <p className="text-xs text-red-300">
+                      Keluar dari akun anda
+                    </p>
+                  </Link>
                 </span>
               </button>
             </div>
@@ -87,5 +112,5 @@ export default function Profile() {
         </div>
       </main>
     </div>
-  )
+  );
 }

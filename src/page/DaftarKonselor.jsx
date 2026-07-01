@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Search } from "lucide-react";
 import profile from "../assets/Navbar/Profile.png";
+import { Link } from "react-router-dom";
 
 const KONSELOR = [
   {
@@ -78,7 +79,7 @@ function KonselorCard({ data }) {
           ● {data.tersedia ? "Tersedia" : "Tidak Tersedia"}
         </span>
 
-        <button
+        <Link to="/detail-jadwal"
           disabled={!data.tersedia}
           className={`w-full md:w-auto rounded-lg px-4 py-2 text-sm font-semibold text-white transition-colors ${
             data.tersedia
@@ -87,7 +88,7 @@ function KonselorCard({ data }) {
           }`}
         >
           Lihat Detail
-        </button>
+        </Link>
       </div>
     </div>
   );

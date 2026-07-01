@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { MapPin, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const RIWAYAT = [
   {
@@ -10,6 +11,7 @@ const RIWAYAT = [
     metode: "Tatap Muka",
     jam: "10:00 - 10:50 WIB",
     status: "Terjadwal",
+    link: '/konseling'
   },
   {
     id: 2,
@@ -19,6 +21,7 @@ const RIWAYAT = [
     metode: "Tatap Muka",
     jam: "10:00 - 10:50 WIB",
     status: "Selesai",
+    link: '/catatan-konseling'
   },
 ];
 
@@ -44,71 +47,73 @@ function RiwayatCard({ item }) {
   const isTerjadwal = item.status === "Terjadwal";
 
   return (
-    <div className="rounded-xl bg-white p-4 md:p-5 shadow-sm">
-      <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-        {/* Kiri */}
-        <div className="flex gap-4">
-          {/* Tanggal */}
-          <div className="flex h-fit w-16 shrink-0 flex-col items-center justify-center rounded-lg bg-violet-100 py-2 text-violet-700">
-            <span className="text-2xl font-bold leading-none">
-              {item.tanggal}
-            </span>
-            <span className="text-xs font-medium">{item.bulan}</span>
+    <Link to={item.link} className="flex flex-col space-y-4">
+      <div className="rounded-xl bg-white p-4 md:p-5 shadow-sm">
+        <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
+          {/* Kiri */}
+          <div className="flex gap-4">
+            {/* Tanggal */}
+            <div className="flex h-fit w-16 shrink-0 flex-col items-center justify-center rounded-lg bg-violet-100 py-2 text-violet-700">
+              <span className="text-2xl font-bold leading-none">
+                {item.tanggal}
+              </span>
+              <span className="text-xs font-medium">{item.bulan}</span>
+            </div>
+
+            {/* Detail */}
+            <div className="min-w-0 flex-1">
+              <h3 className="text-sm md:text-base font-semibold text-gray-900">
+                {item.konselor}
+              </h3>
+
+              <div className="mt-2 flex items-center gap-1 text-sm text-gray-500">
+                <MapPin className="h-4 w-4 shrink-0" />
+                <span>{item.metode}</span>
+              </div>
+
+              <div className="mt-1 flex items-center gap-1 text-sm text-gray-500">
+                <Clock className="h-4 w-4 shrink-0" />
+                <span>{item.jam}</span>
+              </div>
+
+              {/* Tombol */}
+              <div className="mt-4 flex flex-wrap gap-2">
+                {isTerjadwal ? (
+                  <>
+                    <button className="rounded-lg border border-violet-200 px-3 py-1.5 text-xs font-semibold text-violet-700 transition hover:bg-violet-50">
+                      Detail
+                    </button>
+
+                    <button className="rounded-lg border border-violet-200 px-3 py-1.5 text-xs font-semibold text-violet-700 transition hover:bg-violet-50">
+                      Reschedule
+                    </button>
+
+                    <button className="rounded-lg border border-red-200 px-3 py-1.5 text-xs font-semibold text-red-600 transition hover:bg-red-50">
+                      Batalkan
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button className="rounded-lg border border-violet-200 px-3 py-1.5 text-xs font-semibold text-violet-700 transition hover:bg-violet-50">
+                      Lihat Catatan
+                    </button>
+
+                    <button className="rounded-lg border border-violet-200 px-3 py-1.5 text-xs font-semibold text-violet-700 transition hover:bg-violet-50">
+                      Telah Dinilai
+                    </button>
+                  </>
+                )}
+              </div>
+            </div>
           </div>
 
-          {/* Detail */}
-          <div className="min-w-0 flex-1">
-            <h3 className="text-sm md:text-base font-semibold text-gray-900">
-              {item.konselor}
-            </h3>
-
-            <div className="mt-2 flex items-center gap-1 text-sm text-gray-500">
-              <MapPin className="h-4 w-4 shrink-0" />
-              <span>{item.metode}</span>
-            </div>
-
-            <div className="mt-1 flex items-center gap-1 text-sm text-gray-500">
-              <Clock className="h-4 w-4 shrink-0" />
-              <span>{item.jam}</span>
-            </div>
-
-            {/* Tombol */}
-            <div className="mt-4 flex flex-wrap gap-2">
-              {isTerjadwal ? (
-                <>
-                  <button className="rounded-lg border border-violet-200 px-3 py-1.5 text-xs font-semibold text-violet-700 transition hover:bg-violet-50">
-                    Detail
-                  </button>
-
-                  <button className="rounded-lg border border-violet-200 px-3 py-1.5 text-xs font-semibold text-violet-700 transition hover:bg-violet-50">
-                    Reschedule
-                  </button>
-
-                  <button className="rounded-lg border border-red-200 px-3 py-1.5 text-xs font-semibold text-red-600 transition hover:bg-red-50">
-                    Batalkan
-                  </button>
-                </>
-              ) : (
-                <>
-                  <button className="rounded-lg border border-violet-200 px-3 py-1.5 text-xs font-semibold text-violet-700 transition hover:bg-violet-50">
-                    Lihat Catatan
-                  </button>
-
-                  <button className="rounded-lg border border-violet-200 px-3 py-1.5 text-xs font-semibold text-violet-700 transition hover:bg-violet-50">
-                    Feedback
-                  </button>
-                </>
-              )}
-            </div>
+          {/* Status */}
+          <div className="md:ml-4">
+            <StatusBadge status={item.status} />
           </div>
-        </div>
-
-        {/* Status */}
-        <div className="md:ml-4">
-          <StatusBadge status={item.status} />
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
@@ -153,9 +158,7 @@ export default function RiwayatKonseling() {
               Tidak ada riwayat konseling pada kategori ini.
             </p>
           ) : (
-            filtered.map((item) => (
-              <RiwayatCard key={item.id} item={item} />
-            ))
+            filtered.map((item) => <RiwayatCard key={item.id} item={item} />)
           )}
         </div>
       </div>
