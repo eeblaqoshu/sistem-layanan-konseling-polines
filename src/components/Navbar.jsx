@@ -49,13 +49,14 @@ export default function Navbar() {
           <Link to="/">
             <img src={Notifikasi} alt="Panah" className="w-6 h-6 mr-2" />
           </Link>
-          <img
-            src={Profile}
-            alt="Profile"
-            className="w-8 h-8 rounded-full object-cover"
-          />
-          <span className="poppins-regular text-sm text-black">Slamet</span>
-          <Link to="/">
+          
+          <Link to="/profile" className="flex items-center gap-2">
+            <img
+              src={Profile}
+              alt="Profile"
+              className="w-11.25 h-11.25 rounded-full object-cover"
+            />
+            <span className="poppins-regular text-md text-black">Slamet</span>
             <img src={PanahBawah} alt="PanahBawah" className="w-5 h-5" />
           </Link>
         </div>
