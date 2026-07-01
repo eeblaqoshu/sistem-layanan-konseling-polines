@@ -205,7 +205,7 @@ function DetailJadwalKonselor() {
             </div>
           </div>
 
-          <Link to="/detail-pemesanan" className="w-full md:w-auto rounded-xl bg-[#7B61FF] px-14 py-3 text-sm font-semibold text-white transition hover:bg-[#6C52F5]">
+          <Link to="/detail-pemesanan" className="text-center w-full md:w-auto rounded-xl bg-[#7B61FF] px-14 py-3 text-sm font-semibold text-white transition hover:bg-[#6C52F5]">
             Lanjut Booking
           </Link>
         </div>
