@@ -144,7 +144,7 @@ export default function DetailPemesanan() {
         </Link>
 
         <Link
-          to="/catatan-konseling"
+          to="/booking-berhasil"
           type="button"
           className="
             flex-1
